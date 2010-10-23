@@ -1,0 +1,3 @@
+host *
+ControlPath ~/.ssh/master-%r@%h:%p
+ControlMaster auto

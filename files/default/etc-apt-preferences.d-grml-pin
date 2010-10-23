@@ -1,0 +1,11 @@
+Package: *
+Pin: release a=grml-stable
+Priority: 200
+
+Package: grml-etc-core
+Pin: release a=grml-stable
+Priority: 999
+
+Package: grml-debian-keyring
+Pin: release a=grml-stable
+Priority: 999
