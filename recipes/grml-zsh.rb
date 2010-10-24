@@ -2,9 +2,7 @@ keyserver = "subkeys.pgp.net"
 grml_key_id = "ECDEA787"
 grml_key_installed = "apt-key list | grep #{grml_key_id}"
 
-execute "apt-key-add" do
-  command "gpg --export #{grml_key_id} | apt-key add -"
-  command "apt-key adv --keyserver #{keyserver} --recv-keys #{grml_key_id}"
+execute "apt-key adv --keyserver #{keyserver} --recv-keys #{grml_key_id}" do
   not_if grml_key_installed
 end
 
