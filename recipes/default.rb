@@ -19,9 +19,4 @@ include_recipe_relative 'mc'
 include_recipe_relative 'ssh'
 include_recipe_relative 'molly-guard'
 include_recipe_relative 'grml-zsh'
-
-if packages_include? "zsh"
-  user "root" do
-    shell "/bin/zsh"
-  end
-end
+include_recipe_relative 'root-preferences'
