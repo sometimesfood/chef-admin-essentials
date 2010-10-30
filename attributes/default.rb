@@ -10,6 +10,8 @@ default.admin_essentials.default_packages = %w(
   zsh
   multitail
   git-core
+  emacs23-nox
+  vim
   etckeeper
   molly-guard
   lsof
