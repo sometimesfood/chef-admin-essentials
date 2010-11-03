@@ -7,13 +7,9 @@ default.admin_essentials.default_packages = %w(
   inotify-tools
   debconf-utils
   rlwrap
-  zsh
   multitail
   git-core
-  emacs23-nox
   vim
-  etckeeper
-  molly-guard
   lsof
   less
   bc
@@ -21,7 +17,6 @@ default.admin_essentials.default_packages = %w(
   psmisc
   tcpdump
   moreutils
-  ack-grep
   tree
   sudo
   dnsutils
