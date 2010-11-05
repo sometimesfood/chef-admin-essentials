@@ -16,5 +16,5 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install chef &> /dev/null || \
   echo 'Please run "apt-get install chef" to see what went wrong.'
   exit 1
 }
-echo 'Removing chef-client from default runlevel...'
-sudo update-rc.d -f chef-client remove > /dev/null
+echo 'Disabling chef-client startup...'
+sudo update-rc.d chef-client disable &> /dev/null
