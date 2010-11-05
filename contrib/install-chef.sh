@@ -10,9 +10,11 @@ sudo apt-key adv --keyserver ${keyserver} --recv-keys ${opscode_key_id} > /dev/n
 echo 'Updating package lists (this may take a while)...'
 sudo apt-get update > /dev/null
 echo 'Installing chef...'
-sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install chef &> /dev/null \
-  || echo 'Installation failed.' \
-  && echo 'Please run "apt-get install chef" to see what went wrong.' \
-  && exit 1
+sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install chef &> /dev/null || \
+{
+  echo 'Installation failed.'
+  echo 'Please run "apt-get install chef" to see what went wrong.'
+  exit 1
+}
 echo 'Removing chef-client from default runlevel...'
 sudo update-rc.d -f chef-client remove > /dev/null
