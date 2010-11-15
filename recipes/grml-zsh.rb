@@ -1,4 +1,4 @@
-include_recipe "chef-apt-repo::grml"
+include_recipe "apt-repo::grml"
 
 directory "/etc/apt/preferences.d"
 cookbook_file "grml-pin" do
