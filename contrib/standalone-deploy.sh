@@ -1,6 +1,8 @@
 #!/bin/bash
-GIT_SRC="http://github.com/sometimesfood/chef-admin-essentials.git"
+ADMIN_ESSENTIALS="http://github.com/sometimesfood/chef-admin-essentials.git"
+APT_REPO="http://github.com/sometimesfood/chef-apt-repo.git"
 COOKBOOK_DIR=`mktemp -d -t chef-admin-essentials.XXXXXX` || exit 1
 cd ${COOKBOOK_DIR}
-git clone ${GIT_SRC} admin-essentials
+git clone ${ADMIN_ESSENTIALS} admin-essentials
+git clone ${APT_REPO} apt-repo
 sudo chef-solo -c admin-essentials/contrib/standalone-config.rb

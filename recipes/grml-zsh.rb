@@ -1,26 +1,6 @@
-keyserver = "subkeys.pgp.net"
-grml_key_id = "ECDEA787"
-grml_key_installed = "apt-key list | grep #{grml_key_id}"
-
-execute "apt-key adv --keyserver #{keyserver} --recv-keys #{grml_key_id}" do
-  not_if grml_key_installed
-end
-
-directory "/etc/apt/sources.list.d"
-
-cookbook_file "grml.list" do
-  path "/etc/apt/sources.list.d/grml.list"
-  source "etc-apt-sources-list-d-grml-list"
-  mode "0644"
-end
-
-execute "aptitude update" do
-  action :nothing
-  subscribes :run, resources(:cookbook_file => "grml.list"), :immediately
-end
+include_recipe "chef-apt-repo::grml"
 
 directory "/etc/apt/preferences.d"
-
 cookbook_file "grml-pin" do
   path "/etc/apt/preferences.d/grml-pin"
   source "etc-apt-preferences.d-grml-pin"
@@ -28,7 +8,6 @@ cookbook_file "grml-pin" do
 end
 
 package "grml-etc-core"
-package "grml-debian-keyring"
 
 grml_screenrcs = ["/etc/grml/screenrc", "/etc/grml/screenrc_grml"]
 grml_screenrcs.each do | screenrc |
