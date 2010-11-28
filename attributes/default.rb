@@ -10,6 +10,8 @@ default.admin_essentials.default_packages = %w(
   multitail
   git-core
   vim
+  emacs23-nox
+  zsh
   lsof
   less
   bc
