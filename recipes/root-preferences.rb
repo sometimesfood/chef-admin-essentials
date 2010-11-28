@@ -6,6 +6,12 @@ user "root" do
 end
 
 cookbook_file "/root/.zshrc.local" do
-  source "dot-zshrc-local"
+  source "dot-zshrc.local"
+  action :create_if_missing
+end
+
+directory "/root/.ssh"
+cookbook_file "/root/.ssh/config" do
+  source "dot-ssh-config"
   action :create_if_missing
 end

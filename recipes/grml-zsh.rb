@@ -3,7 +3,7 @@ include_recipe "apt-repo::grml"
 directory "/etc/apt/preferences.d"
 cookbook_file "grml-pin" do
   path "/etc/apt/preferences.d/grml-pin"
-  source "etc-apt-preferences.d-grml-pin"
+  source "grml-pin"
   mode "0644"
 end
 

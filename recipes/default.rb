@@ -16,7 +16,6 @@ end
 include_recipe_relative 'etckeeper'
 include_recipe_relative 'ack'
 include_recipe_relative 'mc'
-include_recipe_relative 'ssh'
 include_recipe_relative 'molly-guard'
 include_recipe_relative 'grml-zsh'
 include_recipe_relative 'root-preferences'
