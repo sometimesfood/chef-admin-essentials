@@ -10,7 +10,6 @@ recipe "admin-essentials",                   "Install essential admin tools"
 recipe "admin-essentials::ack",              "Install ack"
 recipe "admin-essentials::etckeeper",        "Set up etckeeper"
 recipe "admin-essentials::grml-zsh",         "Set up grml console config"
-recipe "admin-essentials::mc",               "Set up midnight commander"
 recipe "admin-essentials::molly-guard",      "Set up molly-guard"
 recipe "admin-essentials::root-preferences", "Set some preferences for root"
 
