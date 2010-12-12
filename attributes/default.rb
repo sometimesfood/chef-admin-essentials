@@ -22,6 +22,8 @@ default.admin_essentials.default_packages = %w(
   tree
   sudo
   dnsutils
+  curl
+  multitail
 )
 
 default.admin_essentials.all_packages =
