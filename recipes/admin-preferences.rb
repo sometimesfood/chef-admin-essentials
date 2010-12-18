@@ -20,6 +20,13 @@ node.admin_essentials.admin_users.each do |username|
     group admin[:gid]
   end
 
+  # silence zsh-newuser-install
+  file "#{admin[:dir]}/.zshrc" do
+    action :create
+    owner admin[:uid]
+    group admin[:gid]
+  end
+
   directory "#{admin[:dir]}/.ssh" do
     owner admin[:uid]
     group admin[:gid]
