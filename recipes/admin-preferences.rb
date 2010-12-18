@@ -5,6 +5,12 @@ include_recipe_relative 'emacs'
 
 admin_users = node.admin_essentials.admin_users
 
+# add all members of groups in admin_groups to admin list
+node.admin_essentials.admin_groups.each do |admin_group|
+  group_members = Etc.getgrnam(admin_group).mem
+  admin_users += group_members
+end
+
 # add SUDO_USER to admin list if there were no other admins specified
 sudo_user = ENV['SUDO_USER']
 if sudo_user && admin_users.empty?
@@ -13,6 +19,7 @@ end
 
 # always set admin preferences for root
 admin_users << "root"
+admin_users.uniq!
 
 admin_users.each do |username|
   admin = Etc.getpwnam(username)
