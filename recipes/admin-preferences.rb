@@ -1,7 +1,7 @@
 require 'etc'
 
 package "zsh"
-package "emacs23-nox"
+include_recipe_relative 'emacs'
 
 # always set admin preferences for root
 node.admin_essentials.admin_users << "root"
