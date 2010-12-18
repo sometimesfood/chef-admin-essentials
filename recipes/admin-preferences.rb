@@ -3,10 +3,18 @@ require 'etc'
 package "zsh"
 include_recipe_relative 'emacs'
 
-# always set admin preferences for root
-node.admin_essentials.admin_users << "root"
+admin_users = node.admin_essentials.admin_users
 
-node.admin_essentials.admin_users.each do |username|
+# add SUDO_USER to admin list if there were no other admins specified
+sudo_user = ENV['SUDO_USER']
+if sudo_user && admin_users.empty?
+  admin_users << sudo_user
+end
+
+# always set admin preferences for root
+admin_users << "root"
+
+admin_users.each do |username|
   admin = Etc.getpwnam(username)
 
   user username do
