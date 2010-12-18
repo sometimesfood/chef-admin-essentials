@@ -12,8 +12,8 @@ None so far. Yes, I know. I suck.
 
 If you still want to give admin-essentials a spin, just install chef-solo and use the standalone deploy script:
 
-    $ bash < <( curl -s https://github.com/sometimesfood/chef-admin-essentials/raw/master/contrib/install-chef.sh )
-    $ bash < <( curl -s https://github.com/sometimesfood/chef-admin-essentials/raw/master/contrib/standalone-deploy.sh )
+    bash < <( curl -s https://github.com/sometimesfood/chef-admin-essentials/raw/master/contrib/install-chef.sh )
+    bash < <( curl -s https://github.com/sometimesfood/chef-admin-essentials/raw/master/contrib/standalone-deploy.sh )
 
 Copyright
 ---------
