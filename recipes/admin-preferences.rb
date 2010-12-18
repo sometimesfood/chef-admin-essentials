@@ -49,4 +49,11 @@ node.admin_essentials.admin_users.each do |username|
     owner admin[:uid]
     group admin[:gid]
   end
+
+  cookbook_file "#{admin[:dir]}/.gitconfig" do
+    source "dot-gitconfig"
+    action :create_if_missing
+    owner admin[:uid]
+    group admin[:gid]
+  end
 end
