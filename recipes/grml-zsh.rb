@@ -11,14 +11,7 @@ end
 
 package "grml-etc-core"
 
-# only use screenrc_generic for now -- there's no grml-scripts-core package yet
-grml_screenrcs = ["/etc/grml/screenrc", "/etc/grml/screenrc_grml"]
-grml_screenrcs.each do | screenrc |
-  file screenrc do
-    action :nothing
-    subscribes :delete, resources(:package => "grml-etc-core"), :immediately
-  end
-  link screenrc do
-    to "/etc/grml/screenrc_generic"
-  end
+# only use screenrc_generic for users (root has to wait for grml-scripts-core)
+link "/etc/grml/screenrc_grml" do
+  to "/etc/grml/screenrc_generic"
 end
