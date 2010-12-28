@@ -28,8 +28,8 @@ admin_users.each do |username|
     shell "/bin/zsh"
   end
 
-  cookbook_file "#{admin[:dir]}/.zshrc.local" do
-    source "dot-zshrc.local"
+  template "#{admin[:dir]}/.zshrc.local" do
+    source "dot-zshrc.local.erb"
     action :create_if_missing
     owner admin[:uid]
     group admin[:gid]

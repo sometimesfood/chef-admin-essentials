@@ -32,3 +32,6 @@ default.admin_essentials.all_packages =
 # users to set admin preferences for (apart from root)
 default.admin_essentials.admin_users = []
 default.admin_essentials.admin_groups = []
+
+# $EDITOR to set for admins
+default.admin_essentials.editor = 'emacs'
