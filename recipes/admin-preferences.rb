@@ -36,7 +36,7 @@ admin_users.each do |username|
 
   # silence zsh-newuser-install
   file "#{admin[:dir]}/.zshrc" do
-    action :create
+    action :create_if_missing
     owner admin[:uid]
     group admin[:gid]
   end
