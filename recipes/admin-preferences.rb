@@ -1,13 +1,12 @@
-require 'etc'
+include_recipe_relative 'emacs'
 
 package "zsh"
-include_recipe_relative 'emacs'
 
 admin_users = node.admin_essentials.admin_users
 
 # add all members of groups in admin_groups to admin list
 node.admin_essentials.admin_groups.each do |admin_group|
-  group_members = Etc.getgrnam(admin_group).mem
+  group_members = node[:etc][:group][admin_group][:members]
   admin_users += group_members
 end
 
@@ -22,7 +21,7 @@ admin_users << "root"
 admin_users.uniq!
 
 admin_users.each do |username|
-  admin = Etc.getpwnam(username)
+  admin = node[:etc][:passwd][username]
 
   user username do
     shell "/bin/zsh"
