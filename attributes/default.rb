@@ -34,8 +34,5 @@ default.admin_essentials.admin_users = []
 default.admin_essentials.admin_groups = []
 
 # $EDITOR to set for admins, defaults to current $EDITOR (unless empty)
-default.admin_essentials.editor = if ENV['EDITOR'].nil? || ENV['EDITOR'].empty?
-                                    "emacs"
-                                  else
-                                    ENV['EDITOR']
-                                  end
+default.admin_essentials.editor =
+  (ENV['EDITOR'].nil? || ENV['EDITOR'].empty?) ? 'emacs' : ENV['EDITOR']
