@@ -22,6 +22,8 @@ default.admin_essentials.default_packages = %w(
   sudo
   dnsutils
   curl
+  zip
+  unzip
 )
 
 default.admin_essentials.all_packages =
