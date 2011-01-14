@@ -24,6 +24,7 @@ default.admin_essentials.default_packages = %w(
   curl
   zip
   unzip
+  aptitude
 )
 
 default.admin_essentials.all_packages =
