@@ -8,7 +8,6 @@ default.admin_essentials.default_packages = %w(
   debconf-utils
   rlwrap
   multitail
-  git-core
   vim
   zsh
   lsof
