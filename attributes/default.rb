@@ -24,6 +24,7 @@ default.admin_essentials.default_packages = %w(
   zip
   unzip
   aptitude
+  iotop
 )
 
 default.admin_essentials.all_packages =
