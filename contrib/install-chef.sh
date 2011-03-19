@@ -18,3 +18,4 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install chef &> /dev/null || \
 }
 echo 'Disabling chef-client startup...'
 sudo update-rc.d chef-client disable &> /dev/null
+sudo service chef-client stop &> /dev/null
