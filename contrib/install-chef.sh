@@ -1,5 +1,5 @@
 #!/bin/bash
-keyserver=subkeys.pgp.net
+keyserver=keys.gnupg.net
 opscode_key_id=83EF826A
 
 echo 'Adding Opscode repo to sources.list.d...'
