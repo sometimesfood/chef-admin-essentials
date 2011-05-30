@@ -10,8 +10,4 @@ cookbook_file "grml-pin" do
 end
 
 package "grml-etc-core"
-
-# only use screenrc_generic for users (root has to wait for grml-scripts-core)
-link "/etc/grml/screenrc_grml" do
-  to "/etc/grml/screenrc_generic"
-end
+package "grml-scripts-core"
