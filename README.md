@@ -19,4 +19,4 @@ If you still want to give admin-essentials a spin, just install chef-solo and us
 Copyright
 ---------
 
-Copyright (c) 2010 Sebastian Boehm. See LICENSE for details.
+Copyright (c) 2010-2011 Sebastian Boehm. See LICENSE for details.

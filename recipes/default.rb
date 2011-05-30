@@ -2,7 +2,7 @@
 # Cookbook Name:: chef-admin-essentials
 # Recipe:: default
 #
-# Copyright (c) 2010 Sebastian Boehm. See LICENSE for details.
+# Copyright (c) 2010-2011 Sebastian Boehm. See LICENSE for details.
 #
 
 class Chef::Recipe
