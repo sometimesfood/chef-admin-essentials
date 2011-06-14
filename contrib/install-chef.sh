@@ -5,8 +5,8 @@ distribution=$(lsb_release -sc)
 
 echo 'Adding Opscode repo to sources.list.d...'
 cat <<EOS | sudo tee /etc/apt/sources.list.d/opscode.list > /dev/null
-deb     http://apt.opscode.com/ ${distribution} main
-deb-src http://apt.opscode.com/ ${distribution} main
+deb     http://apt.opscode.com/ ${distribution}-0.10 main #Opscode
+deb-src http://apt.opscode.com/ ${distribution}-0.10 main #Opscode
 EOS
 echo 'Adding Opscode key to trusted keyring...'
 sudo apt-key adv --keyserver ${keyserver} --recv-keys ${opscode_key_id} > /dev/null
