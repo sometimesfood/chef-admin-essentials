@@ -25,6 +25,7 @@ default.admin_essentials.default_packages = %w(
   unzip
   aptitude
   iotop
+  tmux
 )
 
 default.admin_essentials.all_packages =
