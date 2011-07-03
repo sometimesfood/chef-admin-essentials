@@ -1,4 +1,4 @@
-x_is_installed = 'dpkg --get-selections libx11-6 | grep -qE "[[:space:]]install$"'
+x_is_installed = 'dpkg --get-selections xserver-xorg-core | grep -qE "[[:space:]]install$"'
 
 package "emacs23-nox" do
   action :install
