@@ -46,6 +46,5 @@ attribute "admin-essentials/admin-groups",
   :calculated => true,
   :required => "optional"
 
-%w(ubuntu debian).each do |os|
-  supports os
-end
+supports "debian", ">= 6.0.0"
+supports "ubuntu", ">= 10.04"
