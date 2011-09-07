@@ -1,5 +1,5 @@
-default.admin_essentials.additional_packages = []
-default.admin_essentials.default_packages = %w(
+# packages to install
+default.admin_essentials.packages = %w(
   mc
   htop
   strace
@@ -27,10 +27,6 @@ default.admin_essentials.default_packages = %w(
   iotop
   tmux
 )
-
-default.admin_essentials.all_packages =
-  default.admin_essentials.default_packages +
-  default.admin_essentials.additional_packages
 
 # users to set admin preferences for (apart from root)
 default.admin_essentials.admin_users = []

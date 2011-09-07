@@ -17,6 +17,6 @@ include_recipe_relative 'emacs'
 include_recipe_relative 'admin-preferences'
 include_recipe_relative 'git'
 
-node.admin_essentials.all_packages.each do | p |
+node.admin_essentials.packages.each do |p|
   package p
 end
