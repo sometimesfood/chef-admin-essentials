@@ -3,9 +3,6 @@ keyserver=keys.gnupg.net
 opscode_key_id=83EF826A
 distribution=$(lsb_release -sc)
 
-# fall back to natty for oneiric since there's no oneiric chef repo yet
-[ $distribution = 'oneiric' ] && distribution='natty'
-
 echo 'Adding Opscode repo to sources.list.d...'
 cat <<EOS | sudo tee /etc/apt/sources.list.d/opscode.list > /dev/null
 deb     http://apt.opscode.com/ ${distribution}-0.10 main #Opscode
