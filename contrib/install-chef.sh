@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 keyserver=keys.gnupg.net
 opscode_key_id=83EF826A
 distribution=$(lsb_release -sc)
