@@ -26,6 +26,7 @@ default.admin_essentials.packages = %w(
   aptitude
   iotop
   tmux
+  keychain
 )
 
 # users to set admin preferences for (apart from root)
