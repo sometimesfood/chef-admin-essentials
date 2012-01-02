@@ -64,3 +64,10 @@ admin_users.each do |username|
     group admin[:gid]
   end
 end
+
+# make sudo preserve $EDITOR
+directory "/etc/sudoers.d"
+file "/etc/sudoers.d/env_keep-editor" do
+  content %Q(Defaults env_keep += "EDITOR"\n)
+  mode "0440"
+end
