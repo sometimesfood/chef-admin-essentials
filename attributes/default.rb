@@ -27,6 +27,8 @@ default.admin_essentials.packages = %w(
   iotop
   tmux
   keychain
+  rar
+  unrar
 )
 
 # users to set admin preferences for (apart from root)
