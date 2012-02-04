@@ -29,6 +29,10 @@ default.admin_essentials.packages = %w(
   keychain
   rar
   unrar
+  wakeonlan
+  whois
+  tcpdump
+  nmap
 )
 
 # users to set admin preferences for (apart from root)
