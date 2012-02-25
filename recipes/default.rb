@@ -16,6 +16,7 @@ include_recipe_relative 'grml-zsh'
 include_recipe_relative 'emacs'
 include_recipe_relative 'admin-preferences'
 include_recipe_relative 'git'
+include_recipe_relative 'locale'
 
 node.admin_essentials.packages.each do |p|
   package p
