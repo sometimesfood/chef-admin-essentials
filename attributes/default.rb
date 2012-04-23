@@ -27,8 +27,6 @@ default.admin_essentials.packages = %w(
   iotop
   tmux
   keychain
-  rar
-  unrar
   wakeonlan
   whois
   tcpdump
