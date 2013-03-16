@@ -11,3 +11,6 @@ end
 
 package "grml-etc-core"
 package "grml-scripts-core"
+cookbook_file "/etc/tmux.conf" do
+  mode "0644"
+end
