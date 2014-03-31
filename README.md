@@ -12,8 +12,7 @@ None so far. Yes, I know. I suck.
 
 If you still want to give admin-essentials a spin, just install chef-solo and use the standalone deploy script:
 
-    sudo apt-get install curl git-core lsb-release
-    bash < <( curl -sL https://raw.github.com/sometimesfood/chef-admin-essentials/master/contrib/install-chef.sh )
+    sudo apt-get install curl git-core lsb-release chef
     bash < <( curl -sL https://raw.github.com/sometimesfood/chef-admin-essentials/master/contrib/standalone-deploy.sh )
 
 Copyright
