@@ -1,0 +1,15 @@
+[Midnight-Commander]
+confirm_exit=0
+
+[Panels]
+navigate_with_arrows=true
+
+[Layout]
+menubar_visible=0
+message_visible=0
+
+[New Left Panel]
+user_mini_status=1
+
+[New Right Panel]
+user_mini_status=1

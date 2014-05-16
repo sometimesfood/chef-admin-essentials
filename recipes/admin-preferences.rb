@@ -53,13 +53,18 @@ admin_users.each do |username|
     group admin[:gid]
   end
 
-  directory "#{admin[:dir]}/.mc" do
+  directory "#{admin[:dir]}/.config" do
     owner admin[:uid]
     group admin[:gid]
   end
 
-  cookbook_file "#{admin[:dir]}/.mc/ini" do
-    source "dot-mc-ini"
+  directory "#{admin[:dir]}/.config/mc" do
+    owner admin[:uid]
+    group admin[:gid]
+  end
+
+  cookbook_file "#{admin[:dir]}/.config/mc/ini" do
+    source "mc-ini"
     owner admin[:uid]
     group admin[:gid]
   end
