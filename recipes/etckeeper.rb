@@ -1,4 +1,5 @@
-package "git-core"
+include_recipe_relative "git"
+
 package "etckeeper"
 
 cookbook_file "/etc/etckeeper/etckeeper.conf" do
