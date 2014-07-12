@@ -2,5 +2,6 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 	g = grep --break --heading --line-number
+	create = "!f() { mkdir -p "$1" && cd "$1" && git init && echo '*~' > .gitignore && git add .gitignore && git commit -aqm 'Initial commit'; }; f"
 [color]
 	ui = true
