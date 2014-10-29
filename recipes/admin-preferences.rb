@@ -26,11 +26,11 @@ node.default['admin_users'].each do |username|
   admin = node[:etc][:passwd][username]
 
   user username do
-    shell "/bin/zsh"
+    shell '/bin/zsh'
   end
 
   template "#{admin[:dir]}/.zshrc.local" do
-    source "dot-zshrc.local.erb"
+    source 'zshrc.local.erb'
     action :create_if_missing
     owner admin[:uid]
     group admin[:gid]
@@ -49,7 +49,7 @@ node.default['admin_users'].each do |username|
   end
 
   cookbook_file "#{admin[:dir]}/.ssh/config" do
-    source "dot-ssh-config"
+    source 'ssh-config'
     action :create_if_missing
     owner admin[:uid]
     group admin[:gid]
@@ -66,15 +66,15 @@ node.default['admin_users'].each do |username|
   end
 
   cookbook_file "#{admin[:dir]}/.config/mc/ini" do
-    source "mc-ini"
+    source 'mc-ini'
     owner admin[:uid]
     group admin[:gid]
   end
 end
 
 # make sudo preserve $EDITOR
-directory "/etc/sudoers.d"
-file "/etc/sudoers.d/env_keep-editor" do
+directory '/etc/sudoers.d'
+file '/etc/sudoers.d/env_keep-editor' do
   content %Q(Defaults env_keep += "EDITOR"\n)
-  mode "0440"
+  mode '0440'
 end
