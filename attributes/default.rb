@@ -32,6 +32,7 @@ default.admin_essentials.packages = %w(
   tcpdump
   nmap
   git-annex
+  pwgen
 )
 
 # users to set admin preferences for (apart from root)
