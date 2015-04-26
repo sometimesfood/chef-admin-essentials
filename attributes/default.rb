@@ -15,7 +15,6 @@ default.admin_essentials.packages = %w(
   bc
   dc
   psmisc
-  tcpdump
   moreutils
   tree
   sudo
