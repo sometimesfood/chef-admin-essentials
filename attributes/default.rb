@@ -9,7 +9,6 @@ default.admin_essentials.packages = %w(
   rlwrap
   multitail
   vim
-  zsh
   lsof
   less
   bc

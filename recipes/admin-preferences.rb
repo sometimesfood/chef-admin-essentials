@@ -2,8 +2,6 @@ include_recipe_relative 'emacs'
 
 node.default['admin_users'] = node.admin_essentials.admin_users
 
-# make sure zsh is installed (in case the admin-preferences recipe is
-# applied on its own)
 package 'zsh'
 
 # add all members of groups in admin_groups to admin list
