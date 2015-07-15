@@ -3,7 +3,6 @@ default.admin_essentials.packages = %w(
   mc
   htop
   strace
-  screen
   inotify-tools
   debconf-utils
   rlwrap

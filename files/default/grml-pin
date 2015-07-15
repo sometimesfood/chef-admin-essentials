@@ -6,10 +6,6 @@ Package: grml-etc-core
 Pin: release a=grml-stable
 Pin-Priority: 999
 
-Package: grml-scripts-core
-Pin: release a=grml-stable
-Pin-Priority: 999
-
 Package: grml-debian-keyring
 Pin: release a=grml-stable
 Pin-Priority: 999
