@@ -28,7 +28,6 @@ default.admin_essentials.packages = %w(
   whois
   tcpdump
   nmap
-  git-annex
   pwgen
   mg
 )
