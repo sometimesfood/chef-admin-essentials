@@ -1,4 +1,4 @@
-package "git-core"
+package "git"
 
 cookbook_file "/etc/gitconfig" do
   source "gitconfig"
